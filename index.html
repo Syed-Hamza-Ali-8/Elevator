@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="building">
+        <div class="floor" id="1">
+            <span class="window"></span>
+            <span class="window"></span>
+        </div>
+        <div class="floor" id="2">
+            <span class="window"></span>
+            <span class="window"></span>
+        </div>
+        <div class="floor" id="3">
+            <span class="window"></span>
+            <span class="window"></span>
+        </div>
+        <div class="floor" id="4">
+            <span class="window"></span>
+            <span class="window"></span>
+        </div>
+
+        <div class="elevator-container">
+            <div class="elevator">
+                <div class="elevator-door left-door"></div>
+                <div class="elevator-door right-door"></div>
+                <div class="people-inside">
+                    <div class="person person-1"></div>
+                    <div class="person person-2"></div>
+                    <div class="person person-3"></div>
+                    <div class="person person-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <div class="floor-display">
+            <span id="currentFloor">Current Floor: 1</span>
+        </div>
+        <button onclick="moveElevatorToFloor(1)">1</button>
+        <button onclick="moveElevatorToFloor(2)">2</button>
+        <button onclick="moveElevatorToFloor(3)">3</button>
+        <button onclick="moveElevatorToFloor(4)">4</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

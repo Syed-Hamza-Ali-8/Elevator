@@ -1,0 +1,170 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #ffefba, #ffffff); 
+    font-family: 'Arial', sans-serif;
+}
+
+.building {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 15px solid #333;
+    background-color: #555;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.floor {
+    height: 120px;
+    border-bottom: 4px solid #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #eee; 
+}
+
+.window {
+    width: 35px;
+    height: 60px;
+    background: #cce5ff; 
+    border: 2px solid #007bff; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.elevator-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.elevator {
+    width: 60px;
+    height: 100px;
+    background-color: #333; 
+    border: 2px solid  #1d1d1d; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 2s ease;
+    border-radius: 8px; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.elevator-door {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #4d4d4d; 
+    transition: transform 1s ease;
+    z-index: 1;
+}
+
+.left-door {
+    left: 0;
+    transform: translateX(0);
+}
+
+.right-door {
+    right: 0;
+    transform: translateX(0);
+}
+
+.open-left {
+    transform: translateX(-100%);
+}
+
+.open-right {
+    transform: translateX(100%);
+}
+
+.people-inside {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.person {
+    width: 40px; 
+    height: 80px; 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    visibility: hidden; 
+}
+
+
+.person-1 {
+    background-image: url('person1.jfif'); 
+}
+
+.person-2 {
+    background-image: url('person2.jfif'); 
+}
+
+.person-3 {
+    background-image: url('person3.jfif'); 
+}
+
+.person-4 {
+    background-image: url('person4.jfif'); 
+}
+
+.control-panel {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floor-display {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333; 
+}
+
+.control-panel button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #333; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.control-panel button:hover {
+    background-color: #0056b3; 
+}
+
+.ground {
+    height: 10px;
+    width: 100%;
+    background-color: #333;
+}
